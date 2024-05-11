@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react"
 
-type TestProps = {
-    
-};
+type TestProps = {}
 
-const Test:React.FC<TestProps> = () => {
-    
-    return <div>Have a good coding</div>
+const Test: React.FC<TestProps> = () => {
+  return <div>Have a good coding</div>
 }
-export default Test;
+export default Test

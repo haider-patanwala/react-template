@@ -1,15 +1,17 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom"
 import Layout from "./Layout"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import Test from "./pages/Test"
+import { NextUIProvider } from "@nextui-org/react"
 
 export default function App() {
+  const navigate = useNavigate()
   return (
-    <BrowserRouter>
+    <NextUIProvider navigate={navigate}>
       <Routes>
         <Route
           path="/"
@@ -29,12 +31,14 @@ export default function App() {
           />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </NextUIProvider>
   )
 }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 )
