@@ -5,7 +5,7 @@ function Layout() {
   return (
     <>
       <Header />
-      <main className=" flex min-h-[80vh] w-screen items-center justify-center">
+      <main className="flex min-h-[80vh] w-screen items-center justify-center">
         <Outlet />
       </main>
     </>
