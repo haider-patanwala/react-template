@@ -6,12 +6,12 @@ import Layout from "./Layout"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import Test from "./pages/Test"
-import { NextUIProvider } from "@nextui-org/react"
+import { HeroUIProvider } from "@heroui/react"
 
 export default function App() {
   const navigate = useNavigate()
   return (
-    <NextUIProvider navigate={navigate}>
+    <HeroUIProvider navigate={navigate}>
       <Routes>
         <Route
           path="/"
@@ -31,7 +31,7 @@ export default function App() {
           />
         </Route>
       </Routes>
-    </NextUIProvider>
+    </HeroUIProvider>
   )
 }
 
